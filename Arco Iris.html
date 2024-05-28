@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arco-íris com texto</title>
+<style>
+ 
+  .rainbow-text {
+    font-size: 49px;
+    font-weight: bold;
+    font-family: Comic Sans  ;
+    display: inline-block;
+    transition: color 0.3s ease; /
+  }
+
+  
+  .red { color: red; }
+  .orange { color: orange; }
+  .yellow { color: yellow; }
+  .green { color: green; }
+  .blue { color: blue; }
+  .indigo { color: indigo; }
+  .violet { color: violet; }
+</style>
+</head>
+<body>
+
+
+<span class="rainbow-text" onmouseover="changeColor(this)">Arco-íris com texto</span>
+
+<script>
+
+function changeColor(element) {
+  var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  element.classList.remove('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet');
+  element.classList.add(randomColor);
+}
+</script>
+
+</body>
+</html>

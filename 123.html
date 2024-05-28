@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Botao Fugitivo</title>
+    <style>
+        body {background-color: black;
+           
+        }
+        button {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <button id="fugir">botao</button>
+
+    <script>
+        document.getElementById('fugir').addEventListener('mouseover', function() {
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var novaPosX = Math.random() * larguraJanela;
+            var novaPosY = Math.random() * alturaJanela;
+
+            this.style.left = novaPosX + 'px';
+            this.style.top = novaPosY + 'px';
+        });
+    </script>
+</body>
+</html>

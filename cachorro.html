@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cachorro Feliz e Triste</title>
+    <style>
+        #dog-image {
+            width: 300px; /* Ajuste conforme o tamanho desejado */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img id="dog-image" src="dog-sad.jpg" alt="Cachorro Triste" onmouseover="makeDogHappy()" onmouseout="makeDogSad()">
+
+    <script>
+        function makeDogHappy() {
+            document.getElementById('dog-image').src = 'https://love.doghero.com.br/wp-content/uploads/2018/12/golden-retriever-1.png';
+        }
+
+        function makeDogSad() {
+            document.getElementById('dog-image').src = 'https://fresh4pet.com.br/wp-content/uploads/2023/02/foto-blog-10-fevereiro-1536x1009.jpg';
+        }
+    </script>
+</body>
+</html>
+
